@@ -1,7 +1,9 @@
+import s from './Filter.module.css';
+
 const Filter = ({ onChangeProp }) => {
     
     return (
-        <form>
+        <form className={s.Form}>
             <label htmlFor="">
                 Find contacts by name<br />
                 <input type="text"

@@ -1,6 +1,8 @@
 import shortid from "shortid";
 import { useState } from "react";
 
+import s from './ContactForm.module.css'
+
 const ContactForm = ({ onSubmitProp }) => {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
@@ -23,9 +25,9 @@ const ContactForm = ({ onSubmitProp }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className={s.Form} onSubmit={handleSubmit}>
             <label htmlFor="">
-                Name<br />
+                Name:<br />
                 <input
                     type="text"
                     name="name"
@@ -37,7 +39,7 @@ const ContactForm = ({ onSubmitProp }) => {
                 />
             </label><br /><br />
             <label htmlFor="">
-                Number<br />
+                Number:<br />
                 <input
                     type="tel"
                     name="number"
@@ -48,7 +50,7 @@ const ContactForm = ({ onSubmitProp }) => {
                     onChange={handleChange}
                 />
             </label><br /><br />
-            <button type="submit">Add contact</button>
+            <button className={s.Button} type="submit">Add contact</button>
         </form>
     );
 };

@@ -44,7 +44,7 @@ const App = () => {
 
 return (
     <>
-    <h1>Phonebook</h1>
+    <h1>☎️ Phonebook ☎️</h1>
     <ContactForm onSubmitProp={formSubmitHandler}/>
 
     <h2>Contacts</h2>

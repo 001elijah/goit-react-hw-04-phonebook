@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 
+import s from './Contact.module.css';
+
 const Contact = ({ contactProp, removeContact }) => {
     return (
-        <li>
+        <li className={s.Item}>
             <span>{contactProp.name}: </span><span>{contactProp.number} </span>
-            <button type="button" onClick={() => removeContact(contactProp.id)}>Delete</button>
+            <button className={s.Button} type="button" onClick={() => removeContact(contactProp.id)}>Delete</button>
         </li>
     );
 };
