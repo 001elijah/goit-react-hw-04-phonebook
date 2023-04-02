@@ -2,11 +2,12 @@ import Contact from "components/Contact/Contact";
 import PropTypes from 'prop-types';
 
 const ContactList = ({contactsProp, removeContact}) => {
-    // console.log(contactsProp);
     return (
-        <ul>
-            {contactsProp.map(contact => <Contact key={contact.id} contactProp={contact} removeContact={removeContact}/>)}
-        </ul>
+        <>
+            {contactsProp.length !== 0 ? <ul>
+                {contactsProp.map(contact => <Contact key={contact.id} contactProp={contact} removeContact={removeContact}/>)}
+            </ul> : <p>Not found</p>}
+        </>
     );
 };
 
