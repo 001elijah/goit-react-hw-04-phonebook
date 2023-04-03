@@ -21,7 +21,7 @@ const App = () => {
     }, [contacts]);
 
   const formSubmitHandler = contactData => {
-    const found = contacts.find(contact => contact.name === contactData.name);
+    const found = contacts.find(contact => contact.name.toLowerCase() === contactData.name.toLowerCase());
     if (found) {
       alert(`${contactData.name} is already in contacts.`);
       return;
